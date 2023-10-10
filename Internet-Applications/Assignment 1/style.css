@@ -1,0 +1,43 @@
+li {
+    list-style-type: square
+}
+
+span#price {
+    color: red;
+    font-weight: bold;
+}
+
+p:first-child{
+    font-style: italic;
+}
+
+td img{
+    border:10px solid blue;
+}
+
+td img:hover{
+    border:10px solid red;
+}
+
+
+h1 + h2{
+    letter-spacing: 5px;
+    color: darkgoldenrod;
+}
+
+h2{
+    color: darkmagenta !important;
+}
+
+td[colspan="2"] p{
+    font-size: small;
+}
+
+p + p {
+    color: gray;
+}
+
+body{
+    background-image: url(https://s.lubimyczytac.pl/upload/books/5086000/5086559/1099890-170x243.jpg);
+    background-repeat: repeat-y;
+}
