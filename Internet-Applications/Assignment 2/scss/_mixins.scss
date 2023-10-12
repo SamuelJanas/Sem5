@@ -1,0 +1,13 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin content-box-style() {
+    background-color: $container-bg;
+    padding: $section-spacing;
+    flex: 1;
+    margin: $section-spacing;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adding a shadow for more emphasis
+}

@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+body {
+    font-size: $default-font-size;
+    margin: 0;
+    padding: $section-spacing;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $container-bg;
+}
+
+header {
+    @include flex-center();
+    font-size: $header-font-size;
+    margin-bottom: $section-spacing;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-box {
+    @include content-box-style();
+
+    &.lorem {
+        background-color: $lorem-bg;
+    }
+
+    &.ipsum {
+        background-color: $ipsum-bg;
+    }
+
+    &.dolor {
+        background-color: $dolor-bg;
+    }
+
+    h2 {
+        font-size: $section-title-font-size;
+        padding: $section-spacing;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+footer {
+    margin-top: auto;
+    @include flex-center();
+}
