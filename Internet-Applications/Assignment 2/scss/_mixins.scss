@@ -1,6 +1,5 @@
 @mixin flex-center() {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -10,4 +9,16 @@
     flex: 1;
     margin: $section-spacing;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adding a shadow for more emphasis
+}
+
+@mixin screen-md {
+    @media screen and (max-width: 1023px) {
+      @content
+    }
+}
+  
+@mixin screen-sm {
+    @media screen and (max-width: 599px) {
+        @content
+    }
 }

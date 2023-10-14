@@ -1,0 +1,20 @@
+footer, .fake-footer {
+  height: 100px;
+}
+
+footer {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border-top: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 40px);
+
+  .name {
+    font-weight: 700;
+  }
+}
