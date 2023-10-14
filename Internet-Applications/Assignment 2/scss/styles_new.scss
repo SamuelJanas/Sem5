@@ -1,0 +1,77 @@
+// Existing Variables
+$default-font-size: 16px;
+$spacing: 20px; // You can adjust this based on the mockups
+
+// New Color Variables
+$color-lorem: #E6E6E6; // Example gray color
+$color-ipsum: #FFD700; // Example gold color
+$color-dolor: #FF6347; // Example tomato color
+
+body, html {
+    font-size: $default-font-size;
+    height: 100%;
+    margin: 0;
+}
+
+header, .box, footer {
+    padding: $spacing;
+    box-sizing: border-box;
+}
+
+header {
+    h1 {
+        font-size: 200%; // 100% larger than default
+    }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box {
+        width: calc(33.333% - (#{$spacing} * 2));
+        
+        &.lorem {
+            font-size: 150%; // 50% larger than default
+            background-color: $color-lorem;
+        }
+
+        &.ipsum {
+            font-size: 150%; // 50% larger than default
+            background-color: $color-ipsum;
+        }
+
+        &.dolor {
+            font-size: 150%; // 50% larger than default
+            background-color: $color-dolor;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    p {
+        margin: 0;
+    }
+}
+
+// Media queries for responsiveness
+@media (max-width: 800px) { // Adjust breakpoint based on your requirement
+    main {
+        .box {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 500px) { // Adjust breakpoint based on your requirement
+    main {
+        .box {
+            width: 100%;
+        }
+    }
+}

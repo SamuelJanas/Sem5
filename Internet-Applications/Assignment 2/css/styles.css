@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #e0e4cc;
+  height: 100%;
 }
 
 header {
@@ -22,23 +22,23 @@ main {
   justify-content: space-between;
 }
 
-.content-box {
+.box {
   background-color: #e0e4cc;
   padding: 20px;
   flex: 1;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.content-box.lorem {
+.box.lorem h2 {
   background-color: #69d2e7;
 }
-.content-box.ipsum {
+.box.ipsum h2 {
   background-color: #f38630;
 }
-.content-box.dolor {
+.box.dolor h2 {
   background-color: #e9aeaf;
 }
-.content-box h2 {
+.box h2 {
   font-size: 24px;
   padding: 20px;
   margin-top: 0;
@@ -46,10 +46,13 @@ main {
 }
 
 footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vh;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+footer p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

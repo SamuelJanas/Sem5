@@ -8,7 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $container-bg;
+    // background-color: $container-bg;
+    height: 100%;
 }
 
 header {
@@ -23,18 +24,18 @@ main {
     justify-content: space-between;
 }
 
-.content-box {
+.box {
     @include content-box-style();
 
-    &.lorem {
+    &.lorem h2{
         background-color: $lorem-bg;
     }
 
-    &.ipsum {
+    &.ipsum h2{
         background-color: $ipsum-bg;
     }
 
-    &.dolor {
+    &.dolor h2{
         background-color: $dolor-bg;
     }
 
@@ -47,6 +48,12 @@ main {
 }
 
 footer {
-    margin-top: auto;
-    @include flex-center();
+    width: 100vh;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
 }

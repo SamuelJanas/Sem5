@@ -1,0 +1,80 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 20px;
+}
+nav li {
+  margin: 0;
+}
+nav li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+main section {
+  padding: 20px;
+  position: relative;
+}
+main section:not(:last-child) {
+  margin-bottom: 20px;
+}
+main section h2 {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 0;
+}
+main section h2.color-lorem {
+  color: #f0db4f;
+}
+main section h2.color-ipsum {
+  color: #2aa7e2;
+}
+main section h2.color-dolor {
+  color: #e94e77;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
