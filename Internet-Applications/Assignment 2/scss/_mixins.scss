@@ -3,22 +3,25 @@
     align-items: center;
 }
 
-@mixin content-box-style() {
-    background-color: $container-bg;
-    padding: $section-spacing;
-    flex: 1;
-    margin: $section-spacing;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adding a shadow for more emphasis
-}
-
 @mixin screen-md {
     @media screen and (max-width: 1023px) {
-      @content
+      @content;
     }
 }
   
 @mixin screen-sm {
     @media screen and (max-width: 599px) {
-        @content
+        @content;
     }
 }
+
+@mixin box-styling {
+    padding: $spacing;
+    margin-bottom: $spacing;
+  
+    h2 {
+      font-size: 1.5 * $default-font-size;
+      margin-bottom: calc($spacing / 2);
+    }
+  }
+  

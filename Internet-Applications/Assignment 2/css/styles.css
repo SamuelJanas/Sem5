@@ -1,0 +1,66 @@
+header {
+  padding: 15px 20px;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+@media screen and (max-width: 599px) {
+  header {
+    justify-content: space-between;
+  }
+}
+header .logo img {
+  height: 120px;
+  width: auto;
+}
+header .title {
+  flex-grow: 2;
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 599px) {
+  header .title {
+    display: none;
+  }
+}
+header .nav .links {
+  display: flex;
+  column-gap: 15px;
+}
+@media screen and (max-width: 1023px) {
+  header .nav .links {
+    display: none;
+  }
+}
+header .nav .links a {
+  text-decoration: none;
+  color: black;
+}
+header .nav .links a:hover {
+  text-decoration: underline;
+}
+header .nav .burger {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  header .nav .burger {
+    display: block;
+  }
+}
+header .nav .burger .button {
+  border: 2px solid black;
+  background: lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+header .nav .burger .button img {
+  height: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
