@@ -13,6 +13,7 @@ main {
         flex-direction: column;
         align-items: flex-start;
         padding: 0 $spacing;
+        position: relative;
 
         @include box-styling;
         background-color: map-get($background-colors, box);
@@ -37,15 +38,28 @@ main {
             flex-direction: column;
             width: calc(100% - $spacing);
         }
+        &::before {
+            content: "";
+            display: block;
+            height: calc(1.5 * $default-font-size + $spacing);
+            width: 100%;
+        }
+
+        p::first-child {
+            margin-top: calc(1.5 * $default-font-size + 2*$spacing);
+        }
 
         h2 {
             font-size: 1.5 * $default-font-size;
             border-width: 0 0 3px 3px;
             border-color: black;
             border-style: solid;
-            margin: 0;
-            // width: 50%;
-            text-align: right;
+            margin: 0 0 $spacing 0;
+            width: 50%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
 
             &#lorem {
                 background-color: map-get($background-colors, lorem);
