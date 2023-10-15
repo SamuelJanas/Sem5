@@ -18,37 +18,41 @@ header .title {
   flex-grow: 2;
   font-size: 2rem;
   font-weight: 700;
+  font-size: 32px;
 }
 @media screen and (max-width: 599px) {
   header .title {
     display: none;
   }
 }
-header .nav .links {
+header .navigation {
+  display: flex;
+}
+header .navigation ul {
   display: flex;
   column-gap: 15px;
 }
-@media screen and (max-width: 1023px) {
-  header .nav .links {
+@media screen and (max-width: 599px) {
+  header .navigation ul {
     display: none;
   }
 }
-header .nav .links a {
+header .navigation ul a {
   text-decoration: none;
   color: black;
 }
-header .nav .links a:hover {
+header .navigation ul a:hover {
   text-decoration: underline;
 }
-header .nav .burger {
+header .navigation .burger {
   display: none;
 }
 @media screen and (max-width: 599px) {
-  header .nav .burger {
+  header .navigation .burger {
     display: block;
   }
 }
-header .nav .burger .button {
+header .navigation .burger button {
   border: 2px solid black;
   background: lightgray;
   border-radius: 10px;
@@ -59,8 +63,93 @@ header .nav .burger .button {
   width: 35px;
   cursor: pointer;
 }
-header .nav .burger .button img {
+header .navigation .burger button img {
   height: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+main .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  width: calc(33.33% - 20px);
+  padding: 0 20px;
+  margin-bottom: 20px;
+  background-color: #e0e4cc;
+  border: 3px solid black;
+}
+@media screen and (max-width: 1023px) {
+  main .box {
+    flex-grow: 0;
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  main .box.lorem {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  main .box.lorem {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 599px) {
+  main .box {
+    flex-direction: column;
+    width: calc(100% - 20px);
+  }
+}
+main .box h2 {
+  font-size: 24px;
+  border-width: 0 0 3px 3px;
+  border-color: black;
+  border-style: solid;
+  margin: 0;
+  text-align: right;
+}
+main .box h2#lorem {
+  background-color: lightblue;
+}
+main .box h2#ipsum {
+  background-color: lightcoral;
+}
+main .box h2#dolor {
+  background-color: lightpink;
+}
+
+footer {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e4cc;
+  border-top: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media screen and (max-width: 599px) {
+  footer {
+    display: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: futura;
 }
 
 /*# sourceMappingURL=styles.css.map */

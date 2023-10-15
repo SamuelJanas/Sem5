@@ -16,12 +16,9 @@
 }
 
 @mixin box-styling {
-    padding: $spacing;
+    width: calc(33.33% - $spacing);
+    padding: 0 $spacing;
     margin-bottom: $spacing;
-  
-    h2 {
-      font-size: 1.5 * $default-font-size;
-      margin-bottom: calc($spacing / 2);
-    }
+
   }
   

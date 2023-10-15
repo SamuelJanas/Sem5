@@ -1,0 +1,17 @@
+
+footer {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($map: $background-colors, $key: box);
+    border-top: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @include screen-sm {
+        display: none;
+    }
+  }

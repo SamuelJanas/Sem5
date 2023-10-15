@@ -21,20 +21,24 @@ header {
       flex-grow: 2;
       font-size: 2rem;
       font-weight: 700;
+      font-size: $default-font-size * 2;
   
       @include screen-sm {
         display: none;
       }
     }
   
-    .nav {
-      .links {
+    .navigation {
+        display: flex;
+        ul {
         display: flex;
         column-gap: 15px;
   
-        @include screen-md {
+        @include screen-sm {
           display: none;
         }
+
+        
   
         a{
           text-decoration: none;
@@ -53,7 +57,7 @@ header {
           display: block;
         }
   
-        .button {
+        button {
           border: 2px solid black;
           background: lightgray;
           border-radius: 10px;
