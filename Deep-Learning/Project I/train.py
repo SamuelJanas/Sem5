@@ -43,6 +43,7 @@ def train_epoch(model, loader, criterion, optimizer, epoch, cfg):
         "model": model.state_dict(),
         "optimizer": optimizer.state_dict(),
         "epoch": epoch,
+        "config": OmegaConf.to_container(cfg),
     }
     torch.save(checkpoint, f"checkpoints/checkpoint.pt") # TODO: add checkpointing to config
     # Print for each epoch
@@ -69,7 +70,12 @@ def test_epoch(model, loader, criterion, epoch, cfg):
 @hydra.main(config_path="config", config_name="train", version_base=None)
 def train(cfg: OmegaConf):
     # initialize model
-    model = HomeBrewRNN().to(cfg.device)
+    model = HomeBrewRNN(
+        hidden_size=cfg.hidden_size, 
+        num_layers=cfg.num_layers, 
+        num_classes=cfg.num_classes, 
+        dropout=cfg.dropout,
+    ).to(cfg.device)
     criterion = nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=cfg.lr) # use Adam optimizer
 

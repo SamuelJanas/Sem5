@@ -1,6 +1,10 @@
-batch_size: 32
+batch_size: 128
 lr: 2e-4
-epochs: 10
+epochs: 9
 
 device: 'cpu' # Can change it to cuda but I doubt it's needed
 
+hidden_size: 128
+num_layers: 2
+num_classes: 5 
+dropout: 0.2
