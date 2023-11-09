@@ -24,6 +24,9 @@ def nltk_pos_to_wordnet_pos(nltk_pos):
 def preprocess_article(article):
     content = article['content']
     link = article['link']
+
+    # Convert content to lowercase
+    content = content.lower()
     
     # Tokenize into sentences, then into words
     sentences = sent_tokenize(content)
@@ -46,3 +49,4 @@ def preprocess_article(article):
         'link': link,
         'content': preprocessed_content
     }
+

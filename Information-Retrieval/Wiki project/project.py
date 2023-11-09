@@ -23,7 +23,7 @@ def main(args):
     # For demonstration, let's use the links of the first 5 articles as input_articles_links
     input_articles_links = [article['link'] for article in preprocessed_articles[:5]]
 
-    recommendations = similarity.get_recommendations(preprocessed_articles, input_articles_links, top_n=3)
+    recommendations = similarity.get_recommendations(preprocessed_articles, input_articles_links, top_n=5)
 
     for rec in recommendations:
         print(f"Based on {rec['original']}, we recommend {rec['recommended']} with a score of {rec['score']}")

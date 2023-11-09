@@ -37,8 +37,6 @@ $('#toggle').toggleClass('asdf');
 });
 
 $(function () {
-    // Select all items of a numbered list with class a, which do not contain any link inside any
-    // element with class b
     $('ol.a:not(:has(.b a))').css('color', 'red');
 })
 
@@ -64,5 +62,7 @@ $(function () {
             <a href="wakalaka.html">Wakalaka</a>
             <a href="asdf.pdf">PDF</a>
             <a href="asdf.html">Asdf</a>
+            <li class="a">First</li>
+
         </body>
         </html

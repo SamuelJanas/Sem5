@@ -19,7 +19,7 @@ def parse_robots_txt():
         for line in robots_txt:
             if line.startswith("User-agent:"):
                 user_agent = line.split(":")[1].strip()
-            elif user_agent == "*" or user_agent == "MyBotName":  # Adjust "MyBotName" to the name of your bot (if it has one)
+            elif user_agent == "*" or user_agent == "MyBotName":
                 if line.startswith("Allow:"):
                     rules["Allow"].append(line.split(":")[1].strip())
                 elif line.startswith("Disallow:"):
@@ -50,6 +50,7 @@ def get_links_from_url(url, rules=None):
             links.append(full_link)
     return list(set(links))
 
+
 def scrape_content_from_link(url):
     try:
         page = requests.get(url)
@@ -65,6 +66,7 @@ def scrape_content_from_link(url):
     except Exception as e:
         print(f"Error scraping {url}: {e}")
         return None
+
 
 def dfs_crawl(url, visited_links, articles, depth=0, rules=None):
     from config import MAX_DEPTH, MAX_ARTICLES
@@ -91,6 +93,7 @@ def dfs_crawl(url, visited_links, articles, depth=0, rules=None):
         if len(articles) >= MAX_ARTICLES:
             break
     time.sleep(SLEEP_TIME)
+
 
 def scrape():
     from config import START_URL
