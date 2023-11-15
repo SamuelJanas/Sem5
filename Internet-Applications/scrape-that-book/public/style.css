@@ -1,0 +1,72 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Button Styling */
+  button#scrapeButton {
+    background-color: #4CAF50; /* Initial background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; /* Required for positioning the explosion effect */
+    overflow: hidden; /* Keeps the explosion effect within the button boundaries */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  }
+  
+  /* Glowing effect */
+  @keyframes glowing {
+    0% { background-color: red; }
+    15% { background-color: orange; }
+    30% { background-color: yellow; }
+    45% { background-color: green; }
+    60% { background-color: blue; }
+    75% { background-color: indigo; }
+    90% { background-color: violet; }
+    100% { background-color: red; }
+  }
+  
+  button#scrapeButton:hover {
+    animation: glowing 2s infinite;
+  }
+  
+  /* Table Styling */
+  table#booksTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table#booksTable th,
+  table#booksTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table#booksTable th {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  table#booksTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Link Styling */
+  table#booksTable a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  table#booksTable a:hover {
+    text-decoration: underline;
+  }
+  
