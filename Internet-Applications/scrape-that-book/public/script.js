@@ -32,7 +32,6 @@ function sortTableByPricePerPage() {
     rows.sort((rowA, rowB) => {
       let valueA = parseFloat(rowA.cells[4].textContent);
       let valueB = parseFloat(rowB.cells[4].textContent);
-      console.log(valueA, valueB);
 
       if (isNaN(valueA)) {
         valueA = 1000;
