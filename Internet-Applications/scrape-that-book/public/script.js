@@ -30,8 +30,16 @@ function sortTableByPricePerPage() {
     let rows = Array.from(table.rows);
   
     rows.sort((rowA, rowB) => {
-      let valueA = parseFloat(rowA.cells[4].textContent); // Assuming price per page is in the 5th column
+      let valueA = parseFloat(rowA.cells[4].textContent);
       let valueB = parseFloat(rowB.cells[4].textContent);
+      console.log(valueA, valueB);
+
+      if (isNaN(valueA)) {
+        valueA = 1000;
+      }
+      if (isNaN(valueB)) {
+        valueB = 1000;
+      }
       return valueA - valueB; // For ascending order, swap valueA and valueB for descending
     });
   

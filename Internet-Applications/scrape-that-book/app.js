@@ -40,12 +40,22 @@ function extractBookDetailsFromPage(html) {
   const $ = cheerio.load(html);
   let bookDetails = {};
   const title = $('div.product-info h1 span').text().trim();
-  const pagesText = $('div.product-info .book-info-line .book-info-value').text().trim();
-  const pages = parseInt(pagesText, 10);
+
+  let pages = null;
+  $('div.book-info-elem').each((index, element) => {
+    const label = $(element).find('.book-info-label').text().trim();
+    if (label.includes('stron')) {
+      const pagesText = $(element).find('.book-info-value').text().trim();
+      pages = parseInt(pagesText, 10);
+      return false; // Break the loop once the correct element is found
+    }
+  });
+
   bookDetails.title = title;
   bookDetails.pages = pages;
   return bookDetails;
 }
+
 
 app.get('/scrape', async (req, res) => {
   if (currentIndex < allBooks.length) {
