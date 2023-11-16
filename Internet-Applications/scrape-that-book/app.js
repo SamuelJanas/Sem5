@@ -18,7 +18,7 @@ async function fetchPage(url) {
     const response = await axios.get(url, {
       responseType: 'arraybuffer'
     });
-    const decodedContent = iconv.decode(response.data, 'utf-8'); // Decode from UTF-8
+    const decodedContent = iconv.decode(response.data, 'iso-8859-2'); // Decode from UTF-8
     return decodedContent;
   } catch (error) {
     console.error('Error fetching the page:', error);
