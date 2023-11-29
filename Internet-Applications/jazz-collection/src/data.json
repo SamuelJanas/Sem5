@@ -1,0 +1,90 @@
+[
+    {
+      "id": 1,
+      "artist": "Miles Davis",
+      "title": "Kind of Blue",
+      "year": 1959,
+      "cover": "https://m.media-amazon.com/images/I/71UUU3OLX2L._UF894,1000_QL80_.jpg",
+      "rating": 6
+    },
+    {
+      "id": 2,
+      "artist": "John Coltrane",
+      "title": "A Love Supreme",
+      "year": 1965,
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ea42191f549dce4d9c8ecd1a",
+      "rating": 6
+    },
+    {
+      "id": 3,
+      "artist": "Charles Mingus",
+      "title": "The Black Saint and the Sinner Lady",
+      "year": 1963,
+      "cover": "https://i.scdn.co/image/ab67616d0000b273eb5b1b39c6c992b79b27651e",
+      "rating": 6
+    },
+    {
+      "id": 4,
+      "artist": "Ornette Coleman",
+      "title": "The Shape of Jazz to Come",
+      "year": 1959,
+      "cover": "https://i.scdn.co/image/ab67616d0000b273abd3f4626eb5181c0e0ac1a9",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "artist": "Herbie Hancock",
+      "title": "Head Hunters",
+      "year": 1973,
+      "cover": "https://i.scdn.co/image/ab67616d0000b2736b75d57d2d070c0c4afb3f9a",
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "artist": "Thelonious Monk",
+      "title": "Brilliant Corners",
+      "year": 1957,
+      "cover": "https://i.scdn.co/image/ab67616d0000b2736f955e40e9783400a004ae55",
+      "rating": 6
+    },
+    {
+      "id": 7,
+      "artist": "Duke Ellington",
+      "title": "Ellington at Newport",
+      "year": 1956,
+      "cover": "https://i.scdn.co/image/ab67616d0000b273abcbce89cc063ac99c5851d2",
+      "rating": 6
+    },
+    {
+      "id": 8,
+      "artist": "Dave Brubeck",
+      "title": "Time Out",
+      "year": 1959,
+      "cover": "https://i.scdn.co/image/ab67616d0000b27300ace5d3c5bffc123ef1eb51",
+      "rating": 7
+    },
+    {
+        "id": 9,
+        "artist": "Cécile McLorin Salvant",
+        "title": "Mélusine",
+        "year": "2023",
+        "cover": "https://i.scdn.co/image/ab67616d0000b27350845bef5aebfcadb980a11e",
+        "rating": 6
+    }, 
+    {
+        "id": 10,
+        "artist": "Magda Kuraś Quintet",
+        "title": "Tryptyk Biłgorajski",
+        "year": "2023",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/d6/05/b0d605d3-0ce5-88f7-c5a4-4a6f81804761/5065000338473.jpg/1200x1200bf-60.jpg",
+        "rating": 6
+    },
+    {
+        "id": 11,
+        "artist": "Leszek Możdżer",
+        "title": "Impressions on Chopin",
+        "year": "2010",
+        "cover": "https://i.scdn.co/image/ab67616d0000b273858f0f5bda517f1eed9e1309",
+        "rating": 7
+    }
+  ]
