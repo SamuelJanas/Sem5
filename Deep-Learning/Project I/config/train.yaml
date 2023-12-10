@@ -2,7 +2,7 @@ batch_size: 128
 lr: 2e-4
 epochs: 9
 
-device: 'cpu' # Can change it to cuda but I doubt it's needed
+device: 'cuda:0'
 
 hidden_size: 128
 num_layers: 2

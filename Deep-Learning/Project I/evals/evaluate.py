@@ -67,7 +67,7 @@ def evaluate(model, loader, criterion, cfg):
 
 @hydra.main(config_path="../config", config_name="train", version_base=None)
 def main(cfg: OmegaConf):
-    model, optimizer, epoch = load_checkpoint("checkpoints/checkpoint_002.pt", config=cfg)
+    model, optimizer, epoch = load_checkpoint("checkpoints/checkpoint.pt", config=cfg)
     _, test_loader = create_dataloader(cfg.batch_size) 
     criterion = nn.BCELoss()
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beetle Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Welcome to the Beetle Store</h1>
+    <% if (query.message) { %>
+        <div class="message"><%= query.message %></div>
+    <% } %>
+    <div class="product-list">
+        <% products.forEach(product => { %>
+            <% if (product.quantity > 0) { %>
+                <div class="product">
+                    <h2><%= product.name %></h2>
+                    <p><%= product.description %></p>
+                    <p>Price: $<%= product.price %></p>
+                    <p>Available: <%= product.quantity %></p>
+                    <form action="/add-to-cart/<%= product.id %>" method="POST">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+    <a href="/checkout">Go to Checkout</a>
+</body>
+</html>

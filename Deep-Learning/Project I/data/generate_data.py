@@ -35,8 +35,8 @@ def generate_data(n: int) -> (np.ndarray, np.ndarray, np.ndarray, np.ndarray):
 
     # create a split for training and testing
     split = int(n*.8)
-    x_train = np.array(xl[:split])
-    y_train = np.array(yl[:split])
-    x_test = np.array(xl[split:])
-    y_test = np.array(yl[split:])
+    
+    x_train, y_train = xl[:split], yl[:split]
+    x_test, y_test = xl[split:], yl[split:]
+
     return x_train, y_train, x_test, y_test
