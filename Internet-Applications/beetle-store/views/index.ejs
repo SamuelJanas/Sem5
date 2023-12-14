@@ -13,11 +13,14 @@
         <% products.forEach(product => { %>
             <% if (product.quantity > 0) { %>
                 <div class="product">
-                    <h2><%= product.name %></h2>
-                    <p><%= product.description %></p>
-                    <p>Price: $<%= product.price %></p>
-                    <p>Available: <%= product.quantity %></p>
+                    <div class="product-description">
+                        <h2><%= product.name %></h2>
+                        <p><%= product.description %></p>
+                    </div>
+
                     <form action="/add-to-cart/<%= product.id %>" method="POST">
+                        <p>Price: $<%= product.price %></p>
+                        <p>Available: <%= product.quantity %></p>
                         <button type="submit">Add to Cart</button>
                     </form>
                 </div>

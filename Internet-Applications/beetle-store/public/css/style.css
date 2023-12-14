@@ -18,6 +18,8 @@ h1 {
 }
 
 .product {
+    display: flex;
+    flex-flow: column;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
@@ -29,6 +31,10 @@ h1 {
 
 .product h2 {
     font-size: 1.2em;
+}
+
+.product form {
+    margin-top: auto;
 }
 
 .message {
