@@ -13,7 +13,7 @@ from train import set_seed
 
 def load_checkpoint(checkpoint_path, config):
     """Load model and optimizer from a checkpoint."""
-    checkpoint = torch.load(checkpoint_path)
+    checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))
     model = HomeBrewRNNAttention(
         hidden_size=config.hidden_size, 
         num_layers=config.num_layers, 
@@ -106,7 +106,7 @@ def main(cfg: OmegaConf):
     all_attn_weights = dict(sorted(all_attn_weights.items(), key=lambda x: (sum([int(i) for i in x[0]]), x[0])))
 
 
-    fig = plot_small_multiples(all_attn_weights, exclude_last=1)
+    fig = plot_small_multiples(all_attn_weights, exclude_last=15)
     fig.savefig("charts/small_multiples.png")
 
 
